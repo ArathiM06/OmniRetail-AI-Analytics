@@ -244,17 +244,6 @@ jupyter notebook ArathiM_OmniRetail_AI_Analytics.ipynb
 
 ---
 
-## ✅ Submission Deliverables Checklist
-As required by the **AICTE | IBM SkillsBuild Certificate Verification Form**:
-
-- [x] **Code File (`.ipynb`):** [`ArathiM_OmniRetail_AI_Analytics.ipynb`](ArathiM_OmniRetail_AI_Analytics.ipynb)
-- [x] **Requirements File (`.txt`):** [`requirements.txt`](requirements.txt)
-- [x] **Project Report (`.docx`):** [`ArathiM_OmniRetail_ProjectReport.docx`](ArathiM_OmniRetail_ProjectReport.docx)
-- [x] **README File (`.md`):** [`README.md`](README.md)
-- [x] **GitHub Repository:** All files staged, structured, and ready to push to your GitHub profile.
-
----
-
 ## 📜 Acknowledgments
 Sincere appreciation to:
 - **AICTE (All India Council for Technical Education)** for spearheading national digital skill initiatives.
