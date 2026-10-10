@@ -1,0 +1,430 @@
+﻿MASTERCLASS 2 — AI DISCOVERS THE STORY
+
+
+MASTERCLASS 2
+AI Discovers the Story
+Hands-On Student Guide
+TIME: 60 MINUTES
+	Open Your Google Sheet
+Open the cleaned e-commerce Google Sheet you created in Masterclass 1.
+Keep the sheet open because you will connect it directly to Google Colab.
+Open Google Colab
+Open:
+https://colab.research.google.com
+Sign in with your Google account.
+Click New Notebook.
+Rename the notebook:
+MC2_AI_Discovers_the_Story
+	Get Your Google Sheet Link
+Go back to your cleaned Google Sheet.
+Click the address bar at the top of your browser and copy the complete Google Sheet URL.
+Ask Gemini to Connect the Sheet
+COPY THIS PROMPT INTO GEMINI
+I am a complete beginner using Google Colab.
+ 
+I have a cleaned e-commerce dataset stored in a Google Sheet.
+ 
+I want to connect the Google Sheet directly to Google Colab. I do NOT want to upload an Excel or CSV file.
+ 
+My Google Sheet URL is:
+ 
+https://docs.google.com/spreadsheets/d/1jh8UeSiUokzElxnSYRbD1JAgN-Wqkk4Sqp9axEvNDbw/edit?usp=sharing
+ 
+Give me the exact beginner-friendly Python code to connect this Google Sheet to Google Colab and load the data into a pandas DataFrame called df.
+ 
+Show me exactly where my Google Sheet URL should be placed.
+ 
+Do not invent any column names or data.
+	Copy Gemini's code.
+Return to Colab → click + Code → paste the code → click Run ▶.
+
+
+Check Your Data
+Create a new code cell.
+Paste:
+RUN THIS CODE IN COLAB
+df.head()
+	Click Run ▶.
+You should now see the first few rows of your Google Sheet data.
+Explore Your Dataset
+Go to Gemini and copy:
+COPY THIS PROMPT INTO GEMINI
+My cleaned e-commerce dataset is loaded in Google Colab as a DataFrame called df.
+ 
+I am a complete beginner.
+ 
+Give me one complete Python code block that shows:
+ 
+1. Number of rows
+2. Number of columns
+3. Column names
+4. Data types
+5. Summary statistics
+6. Unique values in the important categorical columns
+7. First 5 rows
+ 
+Use pandas and only the data in df.
+ 
+Do not create charts yet.
+	Copy the code → return to Colab → + Code → paste → Run ▶.
+VISUALIZATION 1 — MONTHLY REVENUE
+Create Your First Chart
+We will find which months have the highest and lowest revenue.
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a complete beginner using Google Colab.
+ 
+My e-commerce dataset is loaded as df.
+ 
+I want to answer this question:
+ 
+Which months generated the highest and lowest revenue?
+ 
+My date column is:
+Order_Date
+ 
+My revenue column is:
+Revenue
+ 
+Give me one complete Python code block using pandas and matplotlib that:
+ 
+1. Converts Order_Date into a date format.
+2. Extracts the month.
+3. Calculates total Revenue for each month.
+4. Keeps the months in chronological order.
+5. Creates a line chart.
+6. Adds a clear title.
+7. Labels the x-axis Month.
+8. Labels the y-axis Revenue.
+ 
+Use only the actual data in df.
+Do not invent values.
+	Copy the code → Colab → + Code → paste → Run ▶.
+Write the Observation
+Look at the chart and identify the highest and lowest months.
+Add a text cell in Colab and write:
+OBSERVATION
+Observation:
+The highest revenue month was _Month: 2026-04 | Revenue: ₹16,102,470_________.
+The lowest revenue month was __Month: 2026-10 | Revenue: ₹86,165________.
+	VISUALIZATION 2 — CATEGORY REVENUE
+Create the Category Chart
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a complete beginner using Google Colab.
+ 
+My e-commerce dataset is loaded as df.
+ 
+I want to answer:
+ 
+Which product category generated the highest revenue?
+ 
+My category column is:
+Category
+ 
+My revenue column is:
+Revenue
+ 
+Give me one complete Python code block using pandas and matplotlib that:
+ 
+1. Groups the data by Category.
+2. Calculates total Revenue for each category.
+3. Sorts categories from highest to lowest revenue.
+4. Creates a bar chart.
+5. Adds a clear title.
+6. Labels both axes.
+ 
+Use only the actual data in df.
+Do not invent values.
+	Copy → Colab → + Code → paste → Run ▶.
+Write the Observation
+Look at the chart.
+OBSERVATION
+Observation:
+The highest-revenue category was ___Electronics - ₹60,151,309_______.
+The lowest-revenue category was __Beauty - ₹3,099,721________.
+	VISUALIZATION 3 — CUSTOMER SEGMENTS
+Analyze Customer Segments
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a complete beginner using Google Colab.
+ 
+My e-commerce dataset is loaded as df.
+ 
+I want to understand how customers are distributed across Customer_Segment.
+ 
+My customer ID column is:
+Customer_ID
+ 
+My customer segment column is:
+Customer_Segment
+ 
+Give me one complete Python code block that:
+ 
+1. Counts unique customers in each Customer_Segment.
+2. Calculates the percentage of customers in each segment.
+3. Creates a clear bar chart showing the customer segments.
+4. Shows the percentage for each segment if practical.
+ 
+Make sure repeated transactions from the same Customer_ID are not counted as different customers.
+ 
+Use only the actual data in df.
+	Copy → Colab → + Code → paste → Run ▶.
+Write the Observation
+Look at the chart.
+OBSERVATION
+Observation:
+The largest customer segment was _Repeat Customers_________.
+It represented approximately ___79.33_______% of customers.
+	VISUALIZATION 4 — REGIONAL REVENUE
+Analyze Regions
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a complete beginner using Google Colab.
+ 
+My e-commerce dataset is loaded as df.
+ 
+I want to answer:
+ 
+Which regions generate the highest and lowest revenue?
+ 
+My region column is:
+Region
+ 
+My revenue column is:
+Revenue
+ 
+Give me one complete Python code block using pandas and matplotlib that:
+ 
+1. Groups the data by Region.
+2. Calculates total Revenue for each region.
+3. Sorts regions from highest to lowest.
+4. Creates a horizontal bar chart.
+5. Adds a clear title.
+6. Labels the x-axis Revenue.
+7. Labels the y-axis Region.
+ 
+Use only the actual data in df.
+Do not invent values.
+	Copy → Colab → + Code → paste → Run ▶.
+Write the Observation
+OBSERVATION
+Observation:
+The highest-revenue region was __Pune (₹16,770,134)________.
+The lowest-revenue region was __Bangalore (₹12,271,524)________.
+	VISUALIZATION 5 — TOP PRODUCTS
+Analyze Product Profit
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a complete beginner using Google Colab.
+ 
+My e-commerce dataset is loaded as df.
+ 
+I want to answer:
+ 
+Which products generate the highest profit?
+ 
+My product column is:
+Product
+ 
+My profit column is:
+Profit
+ 
+Give me one complete Python code block using pandas and matplotlib that:
+ 
+1. Groups the data by Product.
+2. Calculates total Profit for each product.
+3. Sorts products from highest to lowest profit.
+4. Selects the top 10 products.
+5. Creates a horizontal bar chart.
+6. Adds a clear title.
+7. Labels the x-axis Profit.
+8. Labels the y-axis Product.
+ 
+Use only the actual data in df.
+Do not invent values.
+	Copy → Colab → + Code → paste → Run ▶.
+Write the Observation
+OBSERVATION
+Observation:
+The highest-profit product was ___Phone  149238_______.
+The second-highest-profit product was __Laptop  147660________.
+	TURN OBSERVATIONS INTO INSIGHTS
+Create Insight 1
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a beginner data analyst.
+ 
+My observation is:
+ 
+Observation:
+The highest revenue month was _Month: 2026-04 | Revenue: ₹16,102,470_________.
+The lowest revenue month was __Month: 2026-10 | Revenue: ₹86,165________
+ 
+Turn this observation into a business insight.
+ 
+The insight must be supported by the data and explain why the pattern matters to the business.
+ 
+Do not invent information or claim a cause that the data does not prove.
+ 
+Give me 2 short options.
+	Choose the better option and write:
+INSIGHT
+Insight 1: Option 1 (Focus on Revenue Volatility & Resource Planning) Revenue experienced extreme fluctuation across the year, peaking at ₹16,102,470 in April 2026 before dropping to a low of ₹86,165 in October 2026. This severe drop indicates strong revenue instability, meaning the business cannot rely on consistent year-round income and must plan cash flow, inventory, and staffing carefully around high-peak periods like April.
+Option 2 (Focus on Operational Risks & Cash Flow) The business relies heavily on specific peak periods, with April 2026 generating over 180 times more revenue than October 2026. This massive gap highlights a critical operational vulnerability, as lower-performing months may struggle to cover fixed operational costs if cash reserves from peak months are not managed effectively.
+	Create Insights 2–5
+Repeat the same process for each observation.
+Use this prompt:
+COPY THIS PROMPT INTO GEMINI
+I am a beginner data analyst.
+ 
+My observation is:
+ 
+PASTE OBSERVATION HERE
+ 
+Turn this observation into a short business insight.
+ 
+The insight must be supported by the data and explain why the pattern matters to the business.
+ 
+Do not invent information or claim a cause that the data does not prove.
+ 
+Give me 2 short options.
+	Complete:
+INSIGHT
+Insight 2: ________________________________
+ 
+Insight 3: ________________________________
+ 
+Insight 4: ________________________________
+ 
+Insight 5: ________________________________
+	CREATE 3 HYPOTHESES
+Choose Your 3 Strongest Insights
+Review your five insights.
+Select the three that appear most important for the business.
+* 1. High Operational Risk from Unlabeled Data Loss
+Blank/unidentified product entries accounted for ₹13,985,743 in total profit—far eclipsing all named products combined (e.g., Phone at ₹149,238). Missing product metadata masks true SKU performance and creates severe financial tracking blind spots.
+* 2. Extreme Revenue Volatility & Seasonality
+Monthly revenue fluctuated wildly, peaking in April 2026 (₹16,102,470) before dropping to a low in October 2026 (₹86,165)—a ~180x gap. Fixed costs will strain operations during low months if peak-period cash flow isn't strictly reserved.
+* 3. Core Category Dependency on Electronics
+Electronics generated ₹60,151,309, dominating overall revenue compared to the next largest category, Furniture (₹19,482,323). The business relies heavily on Tech SKUs to drive revenue.
+	Create Hypothesis 1
+A hypothesis is a possible explanation for a pattern. It is not a confirmed fact.
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a beginner data analyst.
+ 
+My insight is:
+ 
+   * Monthly revenue fluctuated wildly, peaking in April 2026 (₹16,102,470) before dropping to a low in October 2026 (₹86,165)—a ~180x gap. Fixed costs will strain operations during low months if peak-period cash flow isn't strictly reserved.
+ 
+Suggest 3 possible hypotheses that could explain this pattern.
+ 
+Use words such as may, might, could or possibly.
+ 
+Do not present any hypothesis as a confirmed fact.
+ 
+Keep the hypotheses realistic and related to the available e-commerce data.
+	Choose one:
+HYPOTHESIS
+Hypothesis 1 (Seasonal Demand or Promotional Campaigns): The April peak might be driven by major seasonal marketing campaigns, holiday sales, or year-end buying cycles, whereas October could represent a post-seasonal spending lull where promotional efforts were paused.
+Hypothesis 2 (Stockout or Inventory Shortages): The drastic drop in October may be the result of severe inventory stockouts or supply chain disruptions in top-selling categories like Electronics, which possibly prevented orders from being fulfilled.
+Hypothesis 3 (Pricing Strategy or Product Delistings): The high April revenue could reflect bulk corporate orders or the launch of high-ticket electronics, while October's drop might stem from temporary product delistings or changes in discount structures across key categories.
+	Create Hypotheses 2 and 3
+Use the same prompt with your second and third insights.
+HYPOTHESIS
+Hypothesis 2: ________________________________
+ 
+Hypothesis 3: ________________________________
+	CREATE 3 RECOMMENDATIONS
+Recommendation 1
+Open Gemini and paste:
+COPY THIS PROMPT INTO GEMINI
+I am a beginner data analyst.
+ 
+My insight is:
+ 
+   * Monthly revenue fluctuated wildly, peaking in April 2026 (₹16,102,470) before dropping to a low in October 2026 (₹86,165)—a ~180x gap. Fixed costs will strain operations during low months if peak-period cash flow isn't strictly reserved.
+ 
+My hypothesis is:
+ 
+Hypothesis 1 (Seasonal Demand or Promotional Campaigns): The April peak might be driven by major seasonal marketing campaigns, holiday sales, or year-end buying cycles, whereas October could represent a post-seasonal spending lull where promotional efforts were paused.
+Hypothesis 2 (Stockout or Inventory Shortages): The drastic drop in October may be the result of severe inventory stockouts or supply chain disruptions in top-selling categories like Electronics, which possibly prevented orders from being fulfilled.
+Hypothesis 3 (Pricing Strategy or Product Delistings): The high April revenue could reflect bulk corporate orders or the launch of high-ticket electronics, while October's drop might stem from temporary product delistings or changes in discount structures across key categories.
+ 
+Suggest 3 practical business recommendations based on this insight.
+ 
+The recommendations should be realistic for an e-commerce business.
+ 
+Do not treat the hypothesis as a confirmed fact.
+ 
+Give me short, actionable recommendations.
+	Choose the best recommendation.
+RECOMMENDATION
+Recommendation 1:1. Establish a Cash Reserve Policy During Peak Months
+Allocate a fixed percentage of revenue generated during high-performing months (like April) into an operational reserve fund. This ensures sufficient liquidity to cover fixed expenses—such as hosting, software subscriptions, and baseline salaries—during severe low-revenue periods like October.
+2. Implement Inventory & Supply Chain Safety Stock Monitoring
+Set up real-time inventory alerts and maintain minimum safety stock levels for high-demand categories (such as Electronics). This prevents potential stockouts from cutting off order fulfillment during key sales windows.
+3. Plan Year-Round Demand Generation Campaigns
+Develop targeted promotional campaigns, loyalty incentives, or product bundle offers specifically scheduled for off-peak months to smooth out revenue volatility and maintain steady customer purchasing throughout the year.
+	Recommendations 2 and 3
+Repeat the same process for your second and third insights.
+RECOMMENDATION
+Recommendation 2: ________________________________
+ 
+Recommendation 3: ________________________________
+	FINAL CHECK
+Check Your Work
+You should now have:
+☐   5 Visualizations
+☐   5 Observations
+☐   5 Insights
+☐   3 Hypotheses
+☐   3 Recommendations
+	Final AI Check
+Copy this prompt into Gemini:
+COPY THIS PROMPT INTO GEMINI
+I have completed my e-commerce data analysis.
+ 
+Please check my observations, insights, hypotheses and recommendations.
+ 
+Identify:
+ 
+1. Any statement that is not supported by the data.
+2. Any hypothesis presented as a fact.
+3. Any insight that goes beyond the observation.
+4. Any recommendation that does not logically follow from the insight.
+ 
+Do not rewrite everything.
+ 
+Only tell me what needs to be corrected.
+ 
+Here is my work:
+ 
+OBSERVATIONS:
+   1. Monthly Revenue: Peaked in April 2026 at ₹16,102,470 and reached its lowest point in October 2026 at ₹86,165.
+   2. Category Breakdown: Electronics generated the highest total revenue (₹60,151,309), while Beauty generated the lowest (₹3,099,721).
+   3. Customer Segment Split: Repeat customers account for 79.33% (330 unique IDs), whereas new customers represent 20.67% (86 unique IDs).
+   4. Regional Distribution: Excluding unknown entries, Pune led with ₹16,770,134 in revenue, while Bangalore had the lowest among known regions at ₹12,271,524.
+   5. Product Profitability: Phone is the top named product by profit (₹149,238), but blank/unlabeled product entries accounted for ₹13,985,743 in total profit.
+ 
+INSIGHTS: 
+   1. Extreme Revenue Seasonality: The ~180x gap between April and October revenue reveals severe cash flow instability throughout the year.
+   2. Core Category Dependency: The business is heavily dependent on Electronics, which contributes more revenue than all other categories combined.
+   3. Customer Retention Strength vs. Acquisition Risk: Revenue relies heavily on a loyal base of repeat buyers, but low new customer acquisition limits top-line growth.
+   4. Even Metropolitan Reach: Regional revenue across Tier-1 cities is closely balanced (~₹12.2M to ₹16.7M), indicating widespread demand rather than geographical concentration.
+   5. Data Quality Risk: High profit concentration in blank product entries points to missing SKU metadata, masking true product-level profitability.
+ 
+HYPOTHESES:
+   1. Promotional Lulls: The April peak might be driven by major seasonal marketing campaigns or year-end buying cycles, whereas October could represent a period where marketing activities were paused.
+   2. Supply Chain Disruption: The drastic drop in October may be the result of severe stockouts or inventory shortages in key categories like Electronics.
+   3. Product Catalog Changes: The high April performance could reflect high-ticket item launches, while October's slump might stem from temporary product delistings or changes in discount structures.
+ 
+RECOMMENDATIONS:
+   1. Build Peak-Period Cash Reserves: Reserve a fixed portion of profits during high-revenue months (like April) to cover operational expenses during low-revenue periods (like October).
+   2. Diversify Off-Peak Demand: Launch targeted marketing initiatives, bundle deals, and loyalty incentives during off-peak months to smooth out seasonal drops.
+   3. Implement Data Audit & Safety Stock Controls: Standardize product catalog logging to eliminate blank SKU entries, while maintaining minimum safety stock for top-performing categories to prevent inventory stockouts.
+
+
+	Review the feedback and make any necessary corrections.
+Hands-On Student Guide   |   Page  of

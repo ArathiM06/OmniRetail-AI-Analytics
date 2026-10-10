@@ -1,0 +1,206 @@
+﻿AICTE | IBM SkillsBuild Data Analytics with AI 
+Internship Program 2026
+(17th August to 30th September 2026)
+Masterclass Recordings and Resources
+Dear Students,
+We have compiled all session recordings and resources into a single document for easy reference. Please use this document to review any missed sessions. Kindly do not send access requests, as all users already have VIEWER access and no edits will be permitted. 
+
+
+Training Program Highlights:
+* Company Name: BharatCares
+* Internship Duration: 6 Weeks (17th August to 30th September 2026)
+* Mode: Online
+* Focus Topic: Data Analytics with AI: Foundation to Implementation
+* Cost: Zero-cost program
+* Trainer: Mr. Kartik Hooda
+
+
+IBM SkillsBuild Self-paced Learning plan Link (Deliverable 1): 
+
+1. Students, you have to complete your Digital learning from this link only:
+ 
+IBM SkillsBuild self-paced learning platform link: https://skills.yourlearning.ibm.com/activity/PLAN-D44A9C2C463C?ngo-id=0328&utm_campaign=aca-BhCa-DAPBLWB8/26        
+
+
+2. Upload your self-paced learning certificate here: https://forms.gle/b8JdfXgyGqiMfo3bA        
+
+
+Final Deadline :  24th August, EOD by 6.30 PM (FORM CLOSED)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Schedule (Time-Table)
+
+
+Please Note:
+If you are unable to join the masterclass through Zoom, please join using the YouTube link.
+
+
+Sr. No
+	Topic
+	Date
+	Time
+	Zoom link
+	YouTube Live link
+	1
+	Orientation session
+	August 17
+	4-6 PM
+	https://us06web.zoom.us/j/89605647068
+	https://youtube.com/live/ZZxQ2Znbak0?feature=share
+	2
+	Masterclass 1: Data Fundamentals
+	August 25
+	4-6 PM
+	https://us06web.zoom.us/j/81089819047
+	https://youtube.com/live/iqfznc15bmc?feature=share
+	3
+	Masterclass 2: Data Cleaning & Preparation
+	August 31
+	4-6 PM
+	https://us06web.zoom.us/j/88352521782
+	https://youtube.com/live/bbZo4rJmHL8?feature=share
+	4
+	Masterclass 3: AI for Data Analytics
+	September 3
+	4-6 PM
+	https://us06web.zoom.us/j/85722162692
+	https://youtube.com/live/NGYg7_Dsc9c?feature=share
+	5
+	Masterclass 4: Business Solutions with IBM BOB
+	September 7
+	4-6 PM
+	https://us06web.zoom.us/j/83309408335
+	https://youtube.com/live/rzO2KQ88WN8?feature=share
+	6
+	Project Discussion
+	September 16
+	4-6 PM
+	https://us06web.zoom.us/j/85072839774
+	https://youtube.com/live/soVM4g66t30?feature=share
+	7
+	Career Connect
+	September 21
+	4-6 PM
+	https://us06web.zoom.us/j/89837939980
+	https://youtube.com/live/fA5PtLZ-NHI?feature=share
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Self-learning from your Learning platform and get your Digital Badge and Certificates - Watch Video Tutorials
+
+
+SR. No.
+	Digital Course
+	Deadline to Complete
+	Watch Video Tutorial
+	1.
+	Platform registration - How to register on the IBM SkillsBuild digital learning platform - Sample Video
+	IBM SkillsBuild platform registration is mandatory for all to complete digital learning 
+	https://drive.google.com/file/d/1QCE2_ZSeQF0_pZd2duqjwi9muPXczLft/view?usp=sharing
+
+
+	2.
+	How to Download a Certificate Using Credly (SAMPLE VIDEO)
+	-
+	https://drive.google.com/file/d/1FVmmLzQLVwj0ESGC7dgPgMgLBahSMVoi/view?usp=sharing
+ 
+	3.
+	How to check your Sponsoring Organization in your Digital Learning Platform
+	-
+	https://drive.google.com/file/d/1If8NzCvQmKGTR0HN46t_BzBWFM-awce8/view?usp=drivesdk 
+
+
+	4.
+	How to download your e-certificate from the platform - This will be your Deliverable No. 1
+	-
+	https://drive.google.com/file/d/1OFp7z67PW6SMD8r5uEi_mq-mNp5TtEuX/view?usp=sharing
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recordings & Deck Links
+
+
+Orientation Session - 17/08/2026
+● Recording:  Orienatation Session- 17th August.mp4
+● Deck: Data Analytics.pptx
+_____________________________________________________________________
+Masterclass 1 - 25/08/2026 
+● Recording:  DA Masterclass 1 (25th Aug).mp4
+● Deck: AI_Powered_Data_Analytics_Theory_Deck - Masterclass 1
+● Dataset:  AI + Data: Make Data Intelligent | Masterclass 1 | Practice Dataset
+__________________________________________________________________
+Masterclass 2 - 31/08/2026
+● Recording: 31 Aug- DA Masterclass 3.mp4
+● Session Deck:  AI_Powered_Data_Analytics_Theory_Deck - Masterclass 2
+● Workbook: Masterclass2_Student_Workbook.docx
+_____________________________________________________________________
+Masterclass 3 -  03/09/2026
+● Recording:  3 Sep- DA Masterclass 3.mp4
+● Workbook: Masterclass3_Student_Workbook
+_____________________________________________________________________
+Masterclass 4 - 07/09/2026
+● Recording: 7th sept- Business solutions with IBM BOB.mp4
+● Session Deck: IBM SkillsBuild Academic Internship_ ibm bob●
+● Workbook: Supermarket Sales Analysis DA project
+_____________________________________________________________________
+Project Discussion - 16/09/2026
+● Recording: https://us06web.zoom.us/rec/share/qBqSJZYBgx8OB1fI04Ipq-UEknszBD0XxxMlafQf2pWoZrkMYuwtfikgSS6WxLm9.o2cKkDoYi-OM9xhO        
+_____________________________________________________________________

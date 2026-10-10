@@ -1,0 +1,1067 @@
+﻿MASTERCLASS 3   |   AI Predicts What Happens Next
+
+
+MASTERCLASS 3
+AI Predicts
+What Happens Next
+Student Hands-On Guide
+	________________
+PART 1   GET READY
+STEP 01   Keep Your Dataset Ready
+INSTRUCTION
+Use the cleaned e-commerce dataset from Masterclass 1.
+Your dataset should contain columns similar to:
+Expected columns
+	Order_ID
+	Order_Date
+	Customer_ID
+	Product
+	Category
+	Region
+	Quantity
+	Revenue
+	Profit
+	
+
+Do not change the original dataset.
+	STEP 02   Open Google Colab
+INSTRUCTION
+1. Open your browser.
+2. Go to: https://colab.research.google.com/
+3. Sign in with your Google account if required.
+4. Open your previous Colab notebook if you already have one.
+5. Otherwise, click New Notebook.
+6. Click the notebook name at the top.
+7. Rename it:
+NOTEBOOK NAME
+	MC3_AI_Predicts_What_Happens_Next
+	
+
+8. Press Enter.
+________________
+
+
+PART 2   LOAD YOUR DATA
+STEP 03   Upload Your Dataset
+INSTRUCTION
+In Google Colab:
+1. Look at the left side of the screen.
+2. Click the Files icon.
+3. Click the Upload button.
+4. Select your cleaned dataset.
+5. Wait until the file appears in the Files panel.
+STEP 04   Ask Gemini to Help Load the Dataset
+INSTRUCTION
+Open Gemini and paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am a complete beginner using Google Colab.
+
+
+I have uploaded a cleaned e-commerce dataset to Google Colab.
+
+
+I want to load the dataset into pandas.
+
+
+Please give me the exact beginner-friendly Python code to:
+
+
+1. Import pandas.
+2. Load my uploaded file into a pandas DataFrame.
+3. Display the first 5 rows.
+4. Display all column names.
+5. Display the number of rows and columns.
+6. Display the data types of all columns.
+
+
+Use simple pandas code only.
+
+
+Explain exactly where I should replace the filename with my uploaded filename.
+
+
+Do not create a prediction model yet.
+	STEP 05   Copy the Code into Colab
+RUN THIS CODE
+1. Copy the Python code Gemini gives you.
+2. Return to Google Colab.
+3. Click + Code.
+4. Paste the code.
+5. Replace the filename if necessary.
+6. Click the Run ▶ button.
+7. Check that your data appears.
+CHECK
+You should see:
+* Your dataset rows
+* Column names
+* Number of rows and columns
+* Data types
+	STEP 06   Check Your Columns
+INSTRUCTION
+If your column names are different from:
+EXPECTED COLUMN NAMES
+	Customer_ID
+Order_Date
+Revenue
+	
+
+do not continue yet. Ask Gemini:
+COPY THIS PROMPT INTO GEMINI
+	My dataset has these column names:
+
+
+[PASTE YOUR COLUMN NAMES HERE]
+
+
+I need to identify which columns correspond to:
+
+
+1. Customer ID
+2. Order date
+3. Revenue
+4. Order ID
+
+
+Tell me which of my actual columns I should use for each one.
+
+
+Do not rename anything yet.
+	
+
+Use the actual column names from your dataset.
+________________
+
+
+PART 3   CREATE CUSTOMER-LEVEL DATA
+STEP 07   Understand the Change
+OBSERVATION
+Your original dataset may contain many rows for the same customer.
+We now want: One customer = One row
+For example:
+Customer_ID
+	Order_Count
+	Total_Revenue
+	Avg_Order_Value
+	C001
+	8
+	24000
+	3000
+	C002
+	3
+	7500
+	2500
+	STEP 08   Ask Gemini to Create Customer-Level Data
+INSTRUCTION
+Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am a complete beginner using Google Colab.
+
+
+I have a cleaned e-commerce transaction dataset already loaded into a pandas DataFrame.
+
+
+My actual columns are:
+
+
+Customer_ID
+Order_Date
+Revenue
+
+
+I want to create a customer-level dataset with exactly one row per Customer_ID.
+
+
+For each customer, calculate:
+
+
+1. Number of orders
+2. Total revenue
+3. Average order value
+4. First purchase date
+5. Most recent purchase date
+
+
+Create these columns:
+
+
+Customer_ID
+Order_Count
+Total_Revenue
+Avg_Order_Value
+First_Purchase
+Last_Purchase
+
+
+Please give me complete beginner-friendly pandas code.
+
+
+Before calculating anything, make sure Order_Date is converted into a proper date format.
+
+
+Add comments before each major section.
+
+
+Do not create a prediction model yet.
+
+
+Do not invent any data.
+
+
+At the end, display:
+- the first 10 rows
+- the number of customers
+- the column names
+	STEP 09   Run the Code
+RUN THIS CODE
+1. Copy Gemini's code.
+2. Return to Colab.
+3. Click + Code.
+4. Paste the code.
+5. Click Run ▶.
+6. Check the output.
+CHECK
+You should now have one row per customer.
+	________________
+
+
+PART 4   CREATE RFM FEATURES
+STEP 10   What RFM Means
+R
+Recency
+How recently the customer purchased.
+	
+
+	F
+Frequency
+How often the customer purchased.
+	
+
+	M
+Monetary
+How much money the customer generated.
+	STEP 11   Ask Gemini to Create RFM
+INSTRUCTION
+Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am building a customer churn prediction project in Google Colab.
+
+
+I now have one row per customer.
+
+
+My customer-level columns are:
+
+
+Customer_ID
+Order_Count
+Total_Revenue
+Avg_Order_Value
+First_Purchase
+Last_Purchase
+
+
+I want to create RFM features.
+
+
+Please provide beginner-friendly pandas code to calculate:
+
+
+1. Recency = number of days since the customer's most recent purchase.
+2. Frequency = number of orders made by the customer.
+3. Monetary = total revenue generated by the customer.
+
+
+Use the latest Order_Date in the original transaction dataset as the reference date.
+
+
+Add these new columns:
+
+
+Recency
+Frequency
+Monetary
+
+
+Use the existing customer-level dataset if possible.
+
+
+Explain each feature in one simple sentence.
+
+
+Do not build a prediction model yet.
+
+
+Do not invent any data.
+
+
+At the end, display the first 10 rows.
+	STEP 12   Run the RFM Code
+RUN THIS CODE
+1. Copy the code Gemini gives you.
+2. Return to Colab.
+3. Click + Code.
+4. Paste the code.
+5. Click Run ▶.
+CHECK
+Check that you now have:
+* Customer_ID
+* Recency
+* Frequency
+* Monetary
+along with your other customer-level columns.
+	________________
+
+
+PART 5   DEFINE CUSTOMER CHURN
+STEP 13   Use the Churn Definition
+For this exercise:
+A customer is considered churned if they have not made a purchase for 90 days or more.
+	
+
+Therefore:
+Recency
+	Churn result
+	Recency >= 90
+	Churned
+	Recency < 90
+	Not Churned
+	STEP 14   Create Churn Status
+INSTRUCTION
+Paste this prompt into Gemini:
+COPY THIS PROMPT INTO GEMINI
+	I am building a customer churn prediction model.
+
+
+For this classroom exercise, our business definition is:
+
+
+A customer is considered churned if they have not made a purchase for 180 days or more + frequency is less than 5 + monetary value is less than 100,000
+
+
+I have a customer-level pandas DataFrame with a column called:
+
+
+Recency
+
+
+Create a new column called:
+
+
+Churn_Status
+
+
+Give me the exact beginner-friendly pandas code.
+
+
+Also show me code to count how many customers are:
+1. Churned
+2. Not churned
+
+
+Do not create the prediction model yet.
+
+
+Do not invent any data.
+	STEP 15   Run the Code
+RUN THIS CODE
+1. Copy the code.
+2. Paste it into a new Colab code cell.
+3. Click Run ▶.
+4. Check the counts.
+CHECK
+Your dataset should now contain Churn_Status, where:
+* 1 = Churned
+* 0 = Not Churned
+	________________
+
+
+PART 6   IMPORTANT MODEL SETUP
+STEP 16   Avoid Giving the Model the Answer
+Do not simply use Recency to predict Churn_Status when Churn_Status was created directly from Recency.
+That would give the model the answer in advance.
+	
+
+Instead, ideally use:
+Historical customer behaviour  →  Future churn outcome
+For a proper predictive setup:
+* Use an earlier period to calculate customer behaviour.
+* Use a later period to determine whether the customer actually churned.
+STEP 17   Ask Gemini to Check Your Dataset
+INSTRUCTION
+Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I want to build a leakage-safe customer churn prediction model.
+
+
+Before creating the model, inspect my dataset structure and tell me whether my current Churn_Status target is directly calculated from any of my prediction features.
+
+
+My current features include:
+
+
+Recency
+Frequency
+Monetary
+Avg_Order_Value
+
+
+My target is:
+
+
+Churn_Status
+
+
+Explain whether using Recency as a prediction feature would cause target leakage in my current setup.
+
+
+If it would cause leakage, explain the simplest beginner-friendly way to separate:
+1. Historical data used to create prediction features.
+2. A later period used to determine actual churn.
+
+
+Do not create the model yet.
+	STEP 18   If Your Dataset Has Enough Historical Data
+INSTRUCTION
+Use a historical snapshot approach. Ask Gemini:
+COPY THIS PROMPT INTO GEMINI
+	I am a complete beginner.
+
+
+I want to create a leakage-safe customer churn dataset from my e-commerce transaction data.
+
+
+Use an earlier historical period to calculate:
+
+
+Recency
+Frequency
+Monetary
+Avg_Order_Value
+
+
+Then use a later period to determine whether the customer churned.
+
+
+Our churn definition is:
+
+
+No purchase for 180 days or more.
+
+
+Please:
+
+
+1. Inspect my available Order_Date range.
+2. Suggest a sensible historical cutoff date and future observation period based only on dates actually present in my dataset.
+3. Explain the proposed periods before writing code.
+4. Create customer-level historical features.
+5. Create the future Churn_Status target.
+6. Make sure information from the future period is NOT used to calculate the historical features.
+7. Do not use future information as a prediction feature.
+8. Give me complete beginner-friendly pandas code.
+9. Display the final customer-level dataset.
+
+
+Do not invent dates.
+	STEP 19   If You Are Using the Classroom Simplified Dataset
+INSTRUCTION
+If your trainer has specifically provided a prepared customer-level dataset for the prediction exercise, use that dataset instead. Ask Gemini:
+COPY THIS PROMPT INTO GEMINI
+	I have been provided with a prepared customer-level dataset for a classroom churn prediction exercise.
+
+
+Please inspect the columns and tell me:
+
+
+1. Which columns are prediction features?
+2. Which column is the target?
+3. Whether there is any obvious target leakage.
+4. Which columns should NOT be used as prediction features.
+
+
+Do not change my data.
+
+
+Do not build the model yet.
+	________________
+
+
+PART 7   BUILD THE PREDICTION MODEL
+STEP 20   Prepare the Model
+✓
+Use these features where appropriate
+Recency
+Frequency
+Monetary
+Average Order Value
+	
+
+	✗
+Do not include
+Customer_ID
+Churn_Status as a feature
+Any column created directly from the target
+Future information
+	STEP 21   Ask Gemini for the Model Code
+INSTRUCTION
+Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am a complete beginner in predictive analytics and Python.
+
+
+I have a customer-level e-commerce dataset in Google Colab.
+
+
+My target variable is:
+
+
+Churn_Status
+
+
+My prediction features are:
+
+
+Recency
+Frequency
+Monetary
+Avg_Order_Value
+
+
+Use only these prediction features if they are valid and do not cause target leakage.
+
+
+I want to build a simple customer churn prediction model using logistic regression.
+
+
+Please generate complete beginner-friendly Google Colab code that:
+
+
+1. Selects the valid prediction features.
+2. Selects Churn_Status as the target.
+3. Checks for missing values.
+4. Handles missing values safely if necessary.
+5. Splits the data into training and test data.
+6. Uses a suitable train/test split.
+7. Trains a logistic regression model.
+8. Generates churn predictions.
+9. Generates churn probability for each customer.
+10. Calculates accuracy.
+11. Calculates precision.
+12. Calculates recall.
+13. Displays a confusion matrix.
+14. Creates a results table containing:
+    Customer_ID
+    Actual_Churn_Status
+    Predicted_Churn_Status
+    Churn_Probability
+
+
+Add clear comments before every major section.
+
+
+Explain each major step in simple business language.
+
+
+Do not use advanced mathematics.
+
+
+Do not invent data.
+
+
+Do not use Customer_ID as a prediction feature.
+
+
+Do not use Churn_Status as a prediction feature.
+
+
+Do not use future information.
+
+
+Before giving the code, check whether the selected features are appropriate.
+	________________
+
+
+PART 8   RUN THE MODEL
+STEP 22   Copy the Code
+RUN THIS CODE
+1. Copy the complete code Gemini provides.
+2. Return to Google Colab.
+3. Click + Code.
+4. Paste the code.
+5. Read the comments at the top of each section.
+6. Click Run ▶.
+If Colab asks you to install a package, follow the installation instruction provided by Gemini.
+STEP 23   Check the Model Output
+CHECK
+You should see:
+* Model accuracy
+* Model precision
+* Model recall
+* Confusion matrix
+* Customer predictions
+* Churn probabilities
+	________________
+
+
+PART 9   UNDERSTAND THE MODEL RESULTS
+STEP 24   Ask Gemini to Explain Your Results
+INSTRUCTION
+Copy your actual accuracy, precision and recall values from Colab. Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am a beginner.
+
+
+My customer churn model produced these results:
+
+
+Accuracy : 70.89%
+Precision: 65.31%
+Recall   : 84.21%
+
+
+Please explain each result in very simple business language.
+
+
+Also explain:
+
+
+1. What accuracy means.
+2. What precision means.
+3. What recall means.
+4. Which metric would matter more if the company wants to identify as many genuinely at-risk customers as possible.
+5. Why a high accuracy score alone may not mean that the model is useful.
+
+
+Do not invent or change my results.
+	________________
+
+
+PART 10   READ THE CONFUSION MATRIX
+STEP 25   Ask Gemini to Explain It
+INSTRUCTION
+Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am a complete beginner.
+
+
+My churn model produced a confusion matrix.
+
+
+Explain my confusion matrix in simple business language.
+
+
+Explain these four outcomes:
+
+
+1. True Positive
+2. False Positive
+3. False Negative
+4. True Negative
+
+
+For this project, treat "positive" as:
+
+
+Customer predicted to churn.
+
+
+Explain which outcome represents a missed genuinely at-risk customer.
+
+
+Do not use formulas.
+	________________
+
+
+PART 11   CREATE CUSTOMER RISK SCORES
+STEP 26   Create the Risk Table
+INSTRUCTION
+Paste this prompt into Gemini:
+COPY THIS PROMPT INTO GEMINI
+	My churn model has generated a churn probability for every customer.
+
+
+I want to create a simple customer risk table in pandas.
+
+
+Create these columns:
+
+
+Customer_ID
+Recency
+Frequency
+Monetary
+Churn_Probability
+Risk_Level
+
+
+Use these rules:
+
+
+Churn probability below 40% = Low Risk
+
+
+40% to below 70% = Medium Risk
+
+
+70% or higher = High Risk
+
+
+Sort the table from highest churn probability to lowest.
+
+
+Show the top 20 highest-risk customers.
+
+
+Make the churn probability easy to read as a percentage.
+
+
+Give me beginner-friendly pandas code.
+
+
+Do not invent any data.
+	
+
+RISK LEVEL RULES
+Churn probability
+	Risk level
+	Below 40%
+	Low Risk
+	40% to below 70%
+	Medium Risk
+	70% or higher
+	High Risk
+	STEP 27   Run the Risk Code
+RUN THIS CODE
+1. Copy the code.
+2. Return to Colab.
+3. Click + Code.
+4. Paste the code.
+5. Click Run ▶.
+6. Look at the top 20 customers.
+CHECK
+You should have a table similar to:
+Customer_ID
+	Recency
+	Frequency
+	Monetary
+	Churn Probability
+	Risk Level
+	C001
+	145
+	2
+	3500
+	91%
+	High Risk
+	C002
+	120
+	3
+	5200
+	84%
+	High Risk
+	C003
+	75
+	4
+	8000
+	61%
+	Medium Risk
+	Your values will be different.
+________________
+
+
+PART 12   FIND THE HIGHEST-RISK CUSTOMERS
+STEP 28   Ask Gemini to Analyse the Risk Table
+INSTRUCTION
+Copy the top 20 risk table from Colab. Paste it into Gemini with this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I am analysing customer churn risk.
+
+
+Here is my actual top 20 highest-risk customer table:
+
+
+Customer_ID  Recency  Frequency  Monetary Churn_Probability  Risk_Level
+       C200      151          1      3668             71.0%   High Risk
+       C032      147          1     28620            70.43%   High Risk
+       C231      142          1     44445            69.88% Medium Risk
+       C348      173          1    283560            69.72% Medium Risk
+       C100      139          1     51936            69.57% Medium Risk
+       C091      121          1     46493            68.22% Medium Risk
+       C226       89          1      9930            66.04% Medium Risk
+       C048      108          1    154780            65.95% Medium Risk
+       C224      128          2     13650             65.7% Medium Risk
+       C008       90          1     76659            65.36% Medium Risk
+       C289       80          1     17966             65.2% Medium Risk
+       C233       85          1     55137            65.19% Medium Risk
+       C380       94          1    127374            65.11% Medium Risk
+       C355       78          1     12972            65.09% Medium Risk
+       C149       71          1     10244            64.54% Medium Risk
+       C458       60          1     14260            63.57% Medium Risk
+       C217       46          1      3038             62.5% Medium Risk
+       C364      106          2     64887            62.48% Medium Risk
+       C401       94          2     30686            62.38% Medium Risk
+       C152       40          1      3772            61.98% Medium Risk
+
+
+
+
+Please identify:
+
+
+1. Common patterns among the highest-risk customers.
+2. Whether high Recency appears frequently.
+3. Whether low Frequency appears frequently.
+4. Whether low or moderate Monetary value appears frequently.
+5. Any other visible pattern.
+
+
+Separate your answer into:
+
+
+OBSERVATIONS:
+What is directly visible in the data.
+
+
+POSSIBLE INSIGHTS:
+What these patterns may indicate for the business.
+
+
+Do not claim that any factor causes churn.
+
+
+Use phrases such as "associated with", "appears related to", or "may indicate".
+
+
+Do not invent customer motivations.
+	________________
+
+
+PART 13   ASSOCIATION VS CAUSATION
+STEP 29   Test Your Understanding
+INSTRUCTION
+Read these statements:
+
+
+	Statement
+	A
+	Low purchase frequency causes customers to churn.
+	B
+	Low purchase frequency is associated with higher predicted churn risk.
+	C
+	Customers churn because they dislike the product.
+	D
+	The model proves why customers churn.
+	
+
+CORRECT ANSWER
+B
+	STEP 30   Ask Gemini
+INSTRUCTION
+Paste:
+COPY THIS PROMPT INTO GEMINI
+	I am learning customer churn prediction.
+
+
+Explain why this statement is safer and more accurate:
+
+
+"Low purchase frequency is associated with higher predicted churn risk."
+
+
+Explain why the following statements make claims that the model cannot prove:
+
+
+1. Low purchase frequency causes customers to churn.
+2. Customers churn because they dislike the product.
+3. The model proves why customers churn.
+
+
+Keep the explanation beginner-friendly and focused on association versus causation.
+	________________
+
+
+PART 14   TURN PREDICTIONS INTO BUSINESS ACTION
+STEP 31   Ask Gemini for Business Actions
+BUSINESS INSIGHT
+Paste this prompt:
+COPY THIS PROMPT INTO GEMINI
+	I have a customer churn prediction model.
+
+
+The highest-risk customers show patterns involving:
+
+
+- high Recency
+- low Frequency
+- low or moderate Monetary value
+
+
+Based only on these model outputs, suggest 5 practical business actions the company could consider.
+
+
+Important:
+
+
+- Do not claim that these factors cause churn.
+- Use language such as "associated with" or "may indicate."
+- Do not invent customer motivations.
+- Do not assume why customers are leaving.
+- Focus on practical customer-retention actions.
+- Explain why each action could be relevant.
+- Keep the recommendations suitable for an e-commerce business.
+	________________
+
+
+PART 15   500-CUSTOMER DECISION ACTIVITY
+STEP 32   Consider the Scenario
+The company can contact only 500 customers.
+	
+
+You have two models:
+A
+Model A
+Finds more of the customers who are actually at risk.
+	
+
+	B
+Model B
+Is correct more often whenever it flags a customer.
+	
+
+THINK ABOUT
+* What happens if you miss a genuinely high-risk customer?
+* What happens if you contact a customer who was not actually going to churn?
+* Which mistake is more expensive for the business?
+STEP 33   Ask Gemini
+INSTRUCTION
+COPY THIS PROMPT INTO GEMINI
+	A company can afford to contact only 500 customers for a retention campaign.
+
+
+Model A has higher recall.
+
+
+Model B has higher precision.
+
+
+Explain:
+
+
+1. What higher recall means in this situation.
+2. What higher precision means in this situation.
+3. When the company might prefer Model A.
+4. When the company might prefer Model B.
+5. Why there is no universally correct answer without knowing the cost of false positives and false negatives.
+
+
+Use simple business language.
+	________________
+
+
+PART 16   FINAL CUSTOMER RISK TABLE
+STEP 34   Create Your Final Output
+CHECK
+Your final table should contain:
+Customer ID
+	Recency
+	Frequency
+	Monetary
+	Churn Probability
+	Risk Level
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Make sure it is sorted:
+Highest Risk  →  Lowest Risk
+STEP 35   Save the Results
+INSTRUCTION
+In Colab:
+1. Make sure your notebook has finished running.
+2. Check that the final risk table is visible.
+3. Save your notebook.
+4. Rename important output variables clearly.
+5. Keep the notebook for the next masterclass.
+________________
+
+
+PART 17   FINAL CHECKLIST
+Before finishing, check every item.
+DATASET
+☐  Dataset loaded successfully
+☐  Customer ID available
+☐  Order Date available
+☐  Revenue available
+☐  Dates converted correctly
+☐  No unnecessary changes made to original data
+CUSTOMER ANALYSIS
+☐  One row per customer
+☐  Order Count created
+☐  Total Revenue created
+☐  Average Order Value created
+☐  First Purchase created
+☐  Last Purchase created
+RFM
+☐  Recency created
+☐  Frequency created
+☐  Monetary created
+CHURN
+☐  Churn definition identified
+☐  Churn Status created
+☐  Churned customers counted
+☐  Non-churned customers counted
+	
+
+	PREDICTION
+☐  Prediction features selected
+☐  Target selected
+☐  Target leakage checked
+☐  Training data created
+☐  Test data created
+☐  Logistic regression model trained
+☐  Predictions generated
+☐  Churn probabilities generated
+EVALUATION
+☐  Accuracy calculated
+☐  Precision calculated
+☐  Recall calculated
+☐  Confusion matrix displayed
+RISK
+☐  Customer risk table created
+☐  Risk levels created
+☐  Highest-risk customers identified
+☐  Risk table sorted by churn probability
+BUSINESS
+☐  Patterns identified
+☐  Association and causation kept separate
+☐  Business actions suggested
+☐  Recommendations based on model output
+	________________
+
+
+FINAL OUTPUT
+At the end of Masterclass 3, you should have:
+Customer-Level Dataset  →
+RFM Features  →
+Churn Target  →
+Prediction Model  →
+Model Evaluation  →
+Churn Probability  →
+Customer Risk Level  →
+Business Action
+	
+
+Your key question is:
+What might happen next, and which customers may be at risk?
+	
+
+Student Hands-On Guide   |   Page
