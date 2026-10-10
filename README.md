@@ -10,7 +10,7 @@
 > **Program:** AICTE | IBM SkillsBuild Data Analytics with AI Internship Program 2026  
 > **Implementing Partner:** BharatCares  
 > **Program Lead / Trainer:** Mr. Kartik Hooda  
-> **Intern:** Sarathi (`itsarathi006@gmail.com`)
+> **Intern:** Arathi M (`itsarathi006@gmail.com`)
 
 ---
 
@@ -190,10 +190,8 @@ Applying the **Masterclass 4 IBM BOB framework**, analytical probabilities were 
 ## 📁 Project Directory Structure
 
 ```
-├── Sarathi_OmniRetail_AI_Analytics.ipynb   # Complete executed Jupyter Notebook (Ready for submission)
-├── YourName_OmniRetail_AI_Analytics.ipynb  # Template Jupyter Notebook (Customizable name)
-├── Sarathi_OmniRetail_ProjectReport.docx    # Formatted Word Project Report with embedded plots
-├── YourName_OmniRetail_ProjectReport.docx   # Template Word Project Report
+├── ArathiM_OmniRetail_AI_Analytics.ipynb   # Complete executed Jupyter Notebook (Ready for submission)
+├── ArathiM_OmniRetail_ProjectReport.docx    # Formatted Word Project Report with embedded plots
 ├── requirements.txt                        # Python dependencies
 ├── README.md                               # Project documentation & GitHub overview
 ├── data/
@@ -241,7 +239,7 @@ python src/omni_retail_pipeline.py
 
 ### 4. Launch Jupyter Notebook
 ```bash
-jupyter notebook Sarathi_OmniRetail_AI_Analytics.ipynb
+jupyter notebook ArathiM_OmniRetail_AI_Analytics.ipynb
 ```
 
 ---
@@ -249,9 +247,9 @@ jupyter notebook Sarathi_OmniRetail_AI_Analytics.ipynb
 ## ✅ Submission Deliverables Checklist
 As required by the **AICTE | IBM SkillsBuild Certificate Verification Form**:
 
-- [x] **Code File (`.ipynb`):** [`Sarathi_OmniRetail_AI_Analytics.ipynb`](Sarathi_OmniRetail_AI_Analytics.ipynb)
+- [x] **Code File (`.ipynb`):** [`ArathiM_OmniRetail_AI_Analytics.ipynb`](ArathiM_OmniRetail_AI_Analytics.ipynb)
 - [x] **Requirements File (`.txt`):** [`requirements.txt`](requirements.txt)
-- [x] **Project Report (`.docx`):** [`Sarathi_OmniRetail_ProjectReport.docx`](Sarathi_OmniRetail_ProjectReport.docx)
+- [x] **Project Report (`.docx`):** [`ArathiM_OmniRetail_ProjectReport.docx`](ArathiM_OmniRetail_ProjectReport.docx)
 - [x] **README File (`.md`):** [`README.md`](README.md)
 - [x] **GitHub Repository:** All files staged, structured, and ready to push to your GitHub profile.
 
